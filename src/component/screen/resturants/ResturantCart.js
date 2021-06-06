@@ -2,6 +2,7 @@ import { Button } from 'antd'
 import { relativeTimeRounding } from 'moment'
 import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
+import Payment from '../payment/Payment'
 import SelectedMenu from './SelectedMenu'
 
 const ResturantCart = ({get}) => {
@@ -60,11 +61,14 @@ setTotalQTY(newQty)
            <div>Toatal Cost: {Math.ceil(totalCost)}</div>
            <br/>
            <br/>
-           <Button
+           {/* <Button
            type="primary"
            danger
-           >Proceed to Payment</Button>
+           >Proceed to Payment</Button> */}
+
+             <Payment total={totalCost}/>
          </div>
+       
         </div>
 
 
